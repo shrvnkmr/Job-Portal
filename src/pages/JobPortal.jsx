@@ -53,6 +53,7 @@ const JobPortal = () => {
                   minSalary={job?.minSalary}
                   maxSalary={job?.maxSalary}
                   totalEmployee={job?.totalEmployee}
+                  applyType={job?.applyType}
                   setShowModal={setShowModal}
                 />
               </span>
@@ -61,7 +62,7 @@ const JobPortal = () => {
         </div>
       </div>
       {showModal.status ? (
-        <Modal setShowModal={setShowModal}>
+        <Modal>
           <CreateForm
             modalStatus={showModal}
             setShowModal={setShowModal}

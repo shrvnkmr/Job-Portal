@@ -30,7 +30,7 @@ const InputBox = ({
     />
   );
   const multiVariant = (
-    <span className="flex gap-6">
+    <span className="flex gap-6 max-[576px]:block">
       <input
         type={type}
         name={name}

@@ -31,7 +31,7 @@ const JobCard = ({
   };
   return (
     <div className="relative flex flex-col justify-center overflow-hidden">
-      <div className="w-full py-4 px-6 m-auto bg-white rounded-md ring-1 ring-inset ring-[theme('colors.gray')] lg:min-w-[830px]">
+      <div className="w-full py-4 px-6 m-auto bg-white rounded-md ring-1 ring-inset ring-[theme('colors.gray')] lg:min-w-[38rem]">
         <div className="flex">
           <span className="mr-2">
             <img src={CompanyLogo} alt="CompanyLogo" />
@@ -63,12 +63,15 @@ const JobCard = ({
               </p>
             </section>
             <span className="flex gap-6">
-              <Button label={TEXT.APPLY_NOW} onClick={applyNow} />
-              <Button
-                variant={TEXT.OUTLINED}
-                label={TEXT.EXTERNAL_APPLY}
-                onClick={externalApply}
-              />
+              {applyType === RADIO.VALUE_QUICK ? (
+                <Button label={TEXT.APPLY_NOW} onClick={applyNow} />
+              ) : (
+                <Button
+                  variant={TEXT.OUTLINED}
+                  label={TEXT.EXTERNAL_APPLY}
+                  onClick={externalApply}
+                />
+              )}
             </span>
           </div>
         </div>
