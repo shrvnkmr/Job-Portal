@@ -150,6 +150,7 @@ const CreateForm = ({ modalStatus, setShowModal, setJobCreated }) => {
       <span className="flex flex-row justify-between">
         <div className="mb-6">
           <InputBox
+            type={"number"}
             label={LABEL.EXPERIENCE}
             name="minExperience"
             placeholder={PLACEHOLDER.MIN}
@@ -159,6 +160,7 @@ const CreateForm = ({ modalStatus, setShowModal, setJobCreated }) => {
             variant={TEXT.MULTI_VARIANT}
             children={
               <MultiInputField
+                type={"number"}
                 name="maxExperience"
                 placeholder={PLACEHOLDER.MAX}
                 value={formData?.maxExperience}
@@ -172,6 +174,7 @@ const CreateForm = ({ modalStatus, setShowModal, setJobCreated }) => {
       <span className="flex flex-row justify-between">
         <div className="mb-6">
           <InputBox
+            type={"number"}
             label={LABEL.SALARY}
             name="minSalary"
             placeholder={PLACEHOLDER.MIN}
@@ -181,6 +184,7 @@ const CreateForm = ({ modalStatus, setShowModal, setJobCreated }) => {
             variant={TEXT.MULTI_VARIANT}
             children={
               <MultiInputField
+                type={"number"}
                 name="maxSalary"
                 placeholder={PLACEHOLDER.MAX}
                 value={formData?.maxSalary}
