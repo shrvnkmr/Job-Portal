@@ -60,6 +60,12 @@ const CreateForm = ({ modalStatus, setShowModal, setJobCreated }) => {
     }
   };
 
+  window.onclick = (e) => {
+    if (e.target.id === "formModal") {
+      setShowModal(false);
+    }
+  };
+
   useEffect(() => {
     if (startErrorHandling) {
       setJobTitleInvalid(formData?.jobTitle ? false : true);
@@ -229,7 +235,10 @@ const CreateForm = ({ modalStatus, setShowModal, setJobCreated }) => {
   );
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+    <div
+      id="formModal"
+      className="relative flex flex-col justify-center min-h-screen overflow-hidden"
+    >
       <div className="w-full p-8 m-auto bg-white rounded-md ring-1 ring-inset ring-[theme('colors.gray')] lg:max-w-[577px]">
         <span className="flex justify-between">
           <h1 className="text-xl font-sans text-left">{TEXT.MODAL_TITLE}</h1>
