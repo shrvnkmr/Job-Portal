@@ -6,7 +6,7 @@ This is a simple job portal website built using React.js for the frontend view, 
 
 To get started with this project, you will need to clone the repository to your local machine:
 
-`git clone https://github.com/your-username/job-portal.git`
+`git clone https://github.com/shrvnkmr/job-portal.git`
 
 Once you have cloned the repository, you can install the required dependencies:
 
